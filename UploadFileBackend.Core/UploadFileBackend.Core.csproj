@@ -8,10 +8,25 @@
       <Reference Include="Microsoft.AspNetCore.Http.Features, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
         <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\5.0.7\Microsoft.AspNetCore.Http.Features.dll</HintPath>
       </Reference>
+      <Reference Include="Microsoft.AspNetCore.StaticFiles, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+        <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\5.0.7\Microsoft.AspNetCore.StaticFiles.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+        <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\5.0.7\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Mapster" Version="7.2.0" />
       <PackageReference Include="Minio" Version="3.1.13" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\UploadFileBackend.Models\UploadFileBackend.Models.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Extensions" />
     </ItemGroup>
 
 </Project>

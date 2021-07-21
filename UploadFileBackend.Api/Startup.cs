@@ -11,14 +11,21 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using UploadFileBackend.Api.Configuration;
+using UploadFileBackend.Core.Helpers;
+using UploadFileBackend.Core.Services;
 
 namespace UploadFileBackend.Api
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration,IWebHostEnvironment env)
         {
             Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
         }
 
         public IConfiguration Configuration { get; }
@@ -26,6 +33,9 @@ namespace UploadFileBackend.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.ConfigureEnvironmentVariables(Configuration);
+            MapperConfiguration.ConfigureMapper();
+            services.AddScoped<IFileService, MinioService>();
             services.AddCors(options =>
                 options.AddDefaultPolicy(builder =>
                     {
