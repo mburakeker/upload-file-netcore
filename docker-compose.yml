@@ -16,7 +16,6 @@ services:
       - 5000:5000
     depends_on:
       - UploadFile.Minio
-
   UploadFile.Minio:
     container_name: uploadFile.Minio
     image: minio/minio:latest
@@ -25,3 +24,5 @@ services:
         MINIO_SECRET_KEY: change-me-dont-use-this-for-real
     ports:
         - 9000:9000
+    command: server /data
+    restart: always
