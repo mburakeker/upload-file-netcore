@@ -10,6 +10,6 @@ namespace UploadFileBackend.Api.Models
         public FriendlyMessage FriendlyMessage { get; set; }
         public T Data { get; set; }
         public List<T> DataList { get; set; }
-        public int ItemCount => DataList.Any() ? DataList.Count : Convert.ToInt32(Data != null);
+        public int ItemCount => DataList?.Count ?? Convert.ToInt32(Data != null);
     }
 }

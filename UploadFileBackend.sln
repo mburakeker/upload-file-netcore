@@ -1,10 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadFileBackend.Api", "UploadFileBackend.Api\UploadFileBackend.Api.csproj", "{CCBB6870-E17B-4C15-8513-2C52AF841CC0}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadFileBackend.Api", "UploadFileBackend.Api\UploadFileBackend.Api.csproj", "{CCBB6870-E17B-4C15-8513-2C52AF841CC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadFileBackend.Core", "UploadFileBackend.Core\UploadFileBackend.Core.csproj", "{B477FE22-F1B7-4AFD-B804-E50735ECBC50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadFileBackend.Core", "UploadFileBackend.Core\UploadFileBackend.Core.csproj", "{B477FE22-F1B7-4AFD-B804-E50735ECBC50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadFileBackend.Models", "UploadFileBackend.Models\UploadFileBackend.Models.csproj", "{D14515D3-E20F-4583-8426-64D1980736BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadFileBackend.Models", "UploadFileBackend.Models\UploadFileBackend.Models.csproj", "{D14515D3-E20F-4583-8426-64D1980736BA}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{4ADE26B7-8704-414E-B33C-C0737B00F2F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +29,15 @@ Global
 		{D14515D3-E20F-4583-8426-64D1980736BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D14515D3-E20F-4583-8426-64D1980736BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D14515D3-E20F-4583-8426-64D1980736BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ADE26B7-8704-414E-B33C-C0737B00F2F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ADE26B7-8704-414E-B33C-C0737B00F2F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ADE26B7-8704-414E-B33C-C0737B00F2F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ADE26B7-8704-414E-B33C-C0737B00F2F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE39ECEE-875D-4445-BF4B-E31F8C9F7F3E}
 	EndGlobalSection
 EndGlobal
